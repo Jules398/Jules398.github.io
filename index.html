@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jules Janin — CV</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <div class="photo">
+        <img src="photo.jpg.png" alt="photo de Jules Janin">
+      </div>
+
+      <div>
+        <h1>Jules <span class="lastname">Janin</span></h1>
+        <p class="subtitle">Étudiant à Epitech</p>
+      </div>
+
+      <div class="contact">
+        <a href="mailto:jules.janin1@gmail.com">jules.janin1@gmail.com</a>
+        <span>07.67.18.37.67</span>
+        <span>12 bis rue Victor Basch — Couzon au Mont d'Or</span>
+        <div class="lang-switch">
+          <!-- Lien pour changer la langue du CV -->
+          <a href="anglais.html" class="lang-btn">CV en anglais 🇬🇧</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="profile card">
+      <h2>Profil</h2>
+      <p>
+        Étudiant à Epitech, j’aime le développement logiciel et la
+        résolution de problèmes techniques. Rigoureux, dynamique et doté d’un
+        bon esprit d’équipe, je suis en quête d’expériences pour consolider mes
+        compétences en développement et contribuer à des projets concrets.
+      </p>
+    </section>
+
+    <section class="contact-form card">
+      <h2>Contactez moi</h2>
+      <form action="#" method="post">
+        <!-- input text simple pour le nom -->
+        <div class="form-group">
+          <label for="name">Nom</label>
+          <input type="text" id="name" name="name" placeholder="Votre nom complet" required>
+        </div>
+        <!-- input email avec validation intégrée -->
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="vous@example.com" required>
+        </div>
+        <!-- textarea pour le message -->
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Votre message..." required></textarea>
+        </div>
+        <!-- bouton pour envoyer le formulaire -->
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+
+    <!-- Grille pour afficher les sections côte à côte -->
+    <div class="grid">
+      <section class="experience card">
+        <div class="item">
+          <h3>Agent de nettoiement — Métropole de Lyon</h3>
+          <span class="date">Juillet 2024</span>
+          <p>Travail en extérieur, rigueur, ponctualité et autonomie.</p>
+        </div>
+
+        <div class="item">
+          <h3>Stage d'observation — Ingénierie, Renault Trucks SAS</h3>
+          <span class="date">Mars 2023 — Saint-Priest (69)</span>
+          <p>Découverte des process d'ingénierie et environnement industriel.</p>
+        </div>
+      </section>
+
+      <aside class="side card">
+        <!-- aside utilisé pour mettre des infos secondaires -->
+        <h2>Compétences</h2>
+        <div class="skills-group">
+          <h3>Langages</h3>
+          <ul class="skills-list">
+            <li>Pascal</li>
+            <li>C#</li>
+            <li>SQL</li>
+            <li>Python</li>
+            <li>HTML / CSS</li>
+          </ul>
+        </div>
+
+        <div class="skills-group">
+          <h3>CMS</h3>
+          <ul class="skills-list">
+            <li>WordPress (installation, personnalisation, hébergement)</li>
+          </ul>
+        </div>
+
+        <div class="skills-group">
+          <h3>Bases de données</h3>
+          <ul class="skills-list">
+            <li>MySQL (phpMyAdmin)</li>
+          </ul>
+        </div>
+
+        <div class="skills-group">
+          <h3>Outils</h3>
+          <ul class="skills-list">
+            <li>FileZilla</li>
+            <li>Visual Studio Code</li>
+            <li>GitHub</li>
+            <li>VirtualBox</li>
+          </ul>
+        </div>
+
+        <h2>Langues</h2>
+        <ul>
+          <li>Anglais : B2</li>
+          <li>Espagnol : B1</li>
+        </ul>
+
+        <h2>Centres d'intérêt</h2>
+        <ul>
+          <li>Football (licencié au CS Neuvillois)</li>
+          <li>Sport en général</li>
+          <li>Jeux vidéo & eSport</li>
+          <li>Reportages & documentaires</li>
+        </ul>
+      </aside>
+    </div>
+
+    <section class="projects card">
+      <h2>Projets académiques</h2>
+
+      <div class="project">
+        <h3>Développement d’un jeu textuel</h3>
+        <p>
+          Conception d’un jeu avec interface en FreePascal selon cahier des charges.
+          Travail en équipe sur la logique de jeu, gestion des ressources et tests.
+        </p>
+      </div>
+
+      <div class="project">
+        <h3>Optimisation d’un système de recettes</h3>
+        <p>
+          Reprise d’un prototype de jeu vidéo : tris algorithmiques, interface utilisateur,
+          tri alphabétique et par bonus, ajout d’un système de sauvegarde.
+        </p>
+      </div>
+
+      <div class="project">
+        <h3>Installation d’un poste de développement</h3>
+        <p>
+          Installation de 2 VM (Windows & Linux) avec environnement Java, configuration GitHub
+          et rédaction d’un guide d’installation technique.
+        </p>
+      </div>
+
+      <div class="project">
+        <h3>Organisation d’un DevFest</h3>
+        <p>
+          Participation à l’organisation d’un événement tech simulé : ateliers, affiches, pitchs.
+        </p>
+      </div>
+
+      <div class="project">
+        <h3>Analyse des besoins client & site WordPress</h3>
+        <p>
+          Recueil des besoins, maquettes et prototype pour une plateforme de mise en relation.
+          Création et optimisation d’un site WordPress (SEO, accessibilité).
+        </p>
+      </div>
+    </section>
+
+    <section class="education card">
+      <h2>Formation</h2>
+      <div class="edu-item">
+        <h3>Epitech, Lyon</h3>
+        <span class="date">2025 — 2028</span>
+      </div>  
+
+      <div class="edu-item">
+        <h3>B.U.T. Informatique — Université de Bourgogne, Dijon</h3>
+        <span class="date">2024 — 2025</span>
+      </div>
+
+      <div class="edu-item">
+        <h3>Baccalauréat STI2D — Lycée Rosa Park, Neuville-sur-Saône</h3>
+        <span class="date">2024 — Mention Assez Bien</span>
+      </div>
+
+      <div class="edu-item">
+        <h3>Brevet des collèges — Collège Jean de Tournes, Fontaine-sur-Saône</h3>
+        <span class="date">2021 — Mention Assez Bien</span>
+      </div>
+    </section>
+
+    <!-- Footer, toujours en bas, infos générales -->
+    <footer class="footer">
+      <small>CV — Jules Janin • créé avec HTML & CSS</small>
+    </footer>
+  </main>
+</body>
+</html>
