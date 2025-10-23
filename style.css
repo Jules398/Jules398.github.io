@@ -1,0 +1,191 @@
+/* Reset de base pour tout */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  color: #f6f6f6;
+  background: #111;
+  line-height: 1.6;
+  scroll-behavior: smooth; /* scroll doux */
+}
+
+/* Animation d'apparition du body */
+body {
+  animation: fadeInBody 0.8s ease-in-out both;
+}
+@keyframes fadeInBody {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Conteneur principal */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 32px;
+  background: #1a1a1a;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+  transition: box-shadow 0.4s ease; /* animation hover du container */
+}
+.container:hover { box-shadow: 0 6px 26px rgba(0,0,0,0.8); }
+
+/* Header flex pour alignement */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* responsive si petit écran */
+  gap: 16px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 12px;
+  margin-bottom: 22px;
+  animation: fadeIn 0.6s ease-in-out both;
+}
+
+/* Titre et sous-titre */
+.header h1 { font-size: 32px; font-weight: 600; color: #fff; letter-spacing: 0.6px; }
+.header .lastname { color: #fff; }
+.subtitle { font-size: 15px; color: #aaa; margin-top: 4px; }
+
+/* Contact et lien mail / téléphone */
+.contact { text-align: right; font-size: 14px; color: #ccc; }
+.contact a { 
+  color: #00aaff; text-decoration: none; display: block; margin-bottom: 5px;
+  transition: color 0.25s ease, transform 0.2s ease; 
+}
+.contact a:hover { color: #66d9ff; transform: translateX(4px); }
+.contact span { display: block; }
+
+/* Bouton langue */
+.lang-switch { margin-top: 8px; text-align: right; }
+.lang-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #222;
+  color: #00aaff;
+  border: 2px solid #00aaff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+.lang-btn:hover {
+  background: #00aaff;
+  color: #111;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+}
+
+/* Cartes */
+.card {
+  background: #111;
+  border-radius: 10px;
+  padding: 18px 22px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  margin-bottom: 18px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.8s ease forwards; /* animation entrée */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover { transform: translateY(-4px); box-shadow: 0 6px 16px rgba(0,0,0,0.8); }
+.card:nth-of-type(1) { animation-delay: 0.1s; }
+.card:nth-of-type(2) { animation-delay: 0.3s; }
+.card:nth-of-type(3) { animation-delay: 0.5s; }
+.card:nth-of-type(4) { animation-delay: 0.7s; }
+
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Titres des cartes */
+.card h2 {
+  margin: 0 0 12px 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: #00aaff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-left: 4px solid #00aaff; 
+  padding-left: 8px;
+}
+
+/* Grille principale */
+.grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+
+/* Item experience/projet */
+.experience h3, .project h3 { margin: 0; font-size: 15.5px; font-weight: 600; color: #fff; }
+.item, .project { margin-bottom: 14px; transition: transform 0.3s ease; }
+.item:hover, .project:hover { transform: translateX(4px); } /* effet hover */
+.date { display: block; font-size: 13px; color: #aaa; margin-bottom: 6px; }
+.item p, .project p { margin: 4px 0 0; font-size: 14px; color: #ccc; line-height: 1.75; text-align: justify; }
+
+/* Compétences */
+.skills-group h3 { font-size: 14.5px; margin-top: 10px; color: #00aaff; }
+.skills-list { list-style: none; padding-left: 0; display: flex; flex-wrap: wrap; }
+.skills-list li { margin: 3px 6px 3px 0; font-size: 13px; background: #222; color: #00aaff; padding: 4px 8px; border-radius: 4px; }
+
+/* Éducation */
+.education .edu-item { margin-bottom: 12px; }
+.education h3 { margin: 0; font-size: 15.5px; font-weight: 600; color: #fff; }
+.education .date { font-size: 13px; color: #aaa; }
+
+/* Sections avec bordure bleue */
+.profile, .projects, .education { border-top: 3px solid #00aaff; padding-top: 14px; margin-top: 24px; }
+
+/* Footer simple */
+.footer {
+  text-align: center;
+  margin-top: 24px;
+  color: #888;
+  font-size: 13px;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+  animation: fadeIn 1s ease-in-out both;
+}
+
+/* Animation fadeIn générique */
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Photo ronde */
+.photo { width: 110px; height: 110px; border-radius: 50%; overflow: hidden; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.6); border: 2px solid #333; transition: transform 0.3s ease; }
+.photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+.photo img:hover { transform: scale(1.05); } /* zoom léger */
+
+ /* Formulaire contact */
+.contact-form form { display: flex; flex-direction: column; gap: 12px; }
+.contact-form label { font-size: 14px; margin-bottom: 4px; color: #ccc; }
+.contact-form input, .contact-form textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #222;
+  color: #f6f6f6;
+  font-size: 14px;
+  transition: border 0.3s ease, background 0.3s ease;
+}
+.contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: #00aaff; background: #1a1a1a; }
+.contact-form button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #00aaff;
+  color: #111;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.contact-form button:hover { background: #66d9ff; transform: translateY(-2px); }
+
+/* Responsive */
+@media (max-width: 720px) {
+  .grid { grid-template-columns: 1fr; } /* colonnes en une seule pour petit écran */
+  .header { flex-direction: column; align-items: flex-start; }
+  .contact { text-align: left; }
+  .container { padding: 20px; margin: 16px; }
+  .lang-btn { padding: 10px 18px; font-size: 15px; }
+  .contact a { font-size: 15px; }
+}
